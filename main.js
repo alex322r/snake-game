@@ -136,7 +136,7 @@ document.querySelector('body').addEventListener('keydown', e => {
   changeDirection(e.key)
 })
 
-document.querySelector('body').addEventListener('touchstart', e => {
+document.querySelector('body').addEventListener('click', e => {
   e.preventDefault()
 
   const target = e.target.closest('.direction'); // Busca el elemento más cercano con la clase 'direction'
