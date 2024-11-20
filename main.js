@@ -128,15 +128,16 @@ function update() {
   moveSnake(direction)
 }
 
+// dibuja el canvas
 draw()
 
+// evento para presionar las teclas
 document.querySelector('body').addEventListener('keydown', e => {
   changeDirection(e.key)
 })
 
-document.querySelector('body').addEventListener('click', e => {
+document.querySelector('body').addEventListener('touchstart', e => {
   const key = e.target.innerText
-  console.log(key)
   changeDirection(key)
 })
 
