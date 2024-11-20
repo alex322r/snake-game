@@ -137,8 +137,13 @@ document.querySelector('body').addEventListener('keydown', e => {
 })
 
 document.querySelector('body').addEventListener('touchstart', e => {
-  const key = e.target.innerText
-  changeDirection(key)
+  e.preventDefault()
+
+  const target = e.target.closest('.direction'); // Busca el elemento más cercano con la clase 'direction'
+  if (target) {
+    const key = target.innerText;
+    changeDirection(key);
+  }
 })
 
 
