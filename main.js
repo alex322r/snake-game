@@ -134,6 +134,12 @@ document.querySelector('body').addEventListener('keydown', e => {
   changeDirection(e.key)
 })
 
+document.querySelector('body').addEventListener('click', e => {
+  const key = e.target.innerText
+  console.log(key)
+  changeDirection(key)
+})
+
 
 
 
