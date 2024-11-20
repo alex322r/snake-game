@@ -73,20 +73,23 @@ function draw() {
 
 // funcion para mover la serpiente pasandole una direccion
 function moveSnake(_direction) {
+  // velocida de la serpiente
+  let velocity = 2
+
   switch (_direction) {
     case 'right':
         
-      snake[0][0]+=2
+      snake[0][0]+=velocity
       break;
     case 'down':
-      snake[0][1]+=2
+      snake[0][1]+=velocity
       break;
     case 'left':
-      snake[0][0]-=2
+      snake[0][0]-=velocity
       break;
 
     case 'up':
-      snake[0][1]-=2
+      snake[0][1]-=velocity
       break;
   }
 
