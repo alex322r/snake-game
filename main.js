@@ -97,7 +97,6 @@ function moveSnake(_direction) {
 
 // funcion que cambia la direccion 
 function changeDirection(key) {
-  console.log(key)
   switch (key) {
     case 'w':
       direction = DIRECTIONS.UP
@@ -137,13 +136,17 @@ document.querySelector('body').addEventListener('keydown', e => {
 })
 
 document.querySelector('body').addEventListener('click', e => {
-  e.preventDefault()
 
+
+  
   const target = e.target.closest('.direction'); // Busca el elemento más cercano con la clase 'direction'
   if (target) {
     const key = target.innerText;
     changeDirection(key);
+    
   }
+
+
 })
 
 
